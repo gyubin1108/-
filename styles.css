@@ -1,62 +1,143 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
 }
+
+ 
+
+body {
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+height: 100vh;
+
+background-color: #1e1e1e;
+
+font-family: 'Roboto', sans-serif;
+
+}
+
+ 
 
 .calculator {
-    width: 300px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
+
+width: 300px;
+
+background-color: #212121;
+
+border-radius: 15px;
+
+padding: 20px;
+
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
 }
 
-.display {
-    margin-bottom: 10px;
+ 
+
+.calculator-display {
+
+width: 100%;
+
+height: 60px;
+
+background-color: #333;
+
+border: none;
+
+color: white;
+
+font-size: 24px;
+
+text-align: right;
+
+padding-right: 15px;
+
+border-radius: 10px;
+
+margin-bottom: 20px;
+
 }
 
-.display-screen {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 10;
+ 
+
+.calculator-buttons {
+
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 10px;
+
 }
 
-.button-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+ 
+
+button {
+
+height: 60px;
+
+background-color: #333;
+
+border: none;
+
+color: white;
+
+font-size: 24px;
+
+cursor: pointer;
+
+border-radius: 5px;
+
 }
 
-.button {
-    background-color: #f2f2f2;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+ 
+
+button:hover {
+
+background-color: #444;
+
 }
 
-.button:hover {
-    background-color: #d9d9d9;
+ 
+
+[data-operator] {
+
+background-color: #f9a825;
+
 }
 
-.operator {
-    background-color: #ff6666;
-    color: #fff;
+ 
+
+[data-operator]:hover {
+
+background-color: #fbc02d;
+
 }
 
-.equal {
-    background-color: #66cc66;
-    color: #fff;
+ 
+
+[data-clear] {
+
+grid-column: span 4;
+
+background-color: #f44336;
+
 }
 
-.clear {
-    background-color: #999999;
-    color: #fff;
-}
+ 
 
-  
+[data-clear]:hover {
+
+background-color: #ff5e5b;
+
+}
